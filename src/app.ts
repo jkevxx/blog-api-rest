@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use('/api/v1', routes);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, async () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+export { app, server };
