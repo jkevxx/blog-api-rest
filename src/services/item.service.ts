@@ -1,7 +1,7 @@
 import { Car } from '../interfaces/car.interface';
 import ItemModel from '../models/item.model';
 
-const getListItems = async () => {
+const getListItems = async (): Promise<Car[]> => {
   const response = await ItemModel.find({});
   return response;
 };
